@@ -1,10 +1,4 @@
-from dataclasses import fields
-import imp
-from pyexpat import model
-from turtle import title
 from rest_framework import serializers
-
-import quiz
 from .models import Quizzes, Question, Answer
 
 
@@ -42,5 +36,5 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = [
-           'quiz', 'title','answer',
+           'quiz','title','answer',
         ]
